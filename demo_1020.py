@@ -41,7 +41,7 @@ def import_csv_to_sqlite():
         df.to_sql(TABLE_NAME, conn, if_exists="replace", index=False)
         conn.commit()
         conn.close()
-        st.success(f"✅ 已导入 CSV 到 SQLite 数据库：{SQLITE_PATH}")
+        # st.success(f"✅ 已导入 CSV 到 SQLite 数据库：{SQLITE_PATH}")
 
 # ============================
 # 定义允许值
@@ -336,4 +336,5 @@ if st.button("查询"):
             st.plotly_chart(fig, use_container_width=True)
     else:
         st.warning("请输入问题后再查询！")
+
 
